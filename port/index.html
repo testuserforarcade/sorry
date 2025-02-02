@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>I'm Sorry 💕</h1>
+    </header>
+
+    <section class="main-content">
+        <div class="photo-container">
+            <img src="/sorry.jpg" alt="Apology Image">
+        </div>
+
+        <h2 class="message">Please forgive me — here are some notes straight from my heart:</h2>
+
+        <div class="card-container">
+            <div class="card"
+                onclick="showPopup('Pragati, I am truly sorry for any hurt I have caused. You bring so much joy and light to my life, and I never want to be the reason for your sadness.')">
+                💌 Note 1
+            </div>
+            <div class="card" onclick="showPopup('You are one of the most precious parts of my life, Pragati. I promise to learn from my mistakes and always treat you with the love and care you deserve.')">
+                💌 Note 2
+            </div>
+            <div class="card" onclick="showPopup('Pragati, my heart is heavy knowing I have hurt you. Please forgive me and allow me to show how much I care.')">
+                💌 Note 3
+            </div>
+            <div class="card" onclick="showPopup('You mean the world to me, Pragati. I will do everything I can to prove that I am worthy of your forgiveness.')">
+                💌 Note 4
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup Container -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p id="popup-message"></p>
+        </div>
+    </div>
+
+    <script>
+        // Show popup with a message
+        function showPopup(message) {
+            document.getElementById('popup-message').innerText = message;
+            document.getElementById('popup').style.display = 'flex';
+        }
+
+        // Close popup
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
